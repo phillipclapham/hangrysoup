@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Neucha');
+
+html {
+  height: 100%;
+}
+
+.hangBody {
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+}
+
+.hang-top-container {
+  margin-top: 1%;
+  background: rgba(254,254,254,.5);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  font-family: "Neucha", cursive;
+}
+
+.hangLogo {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  margin: auto;
+  padding: 5px;
+}
+
+.hangTitle {
+  margin-top: 10px;
+  font-size: 2.5rem;
+}
+
+.hangSubTitle {
+  font-size: 1.5rem;
+}
+
+.hang-body-container {
+  margin-top: 5px;
+  background: rgba(254,254,254,.5);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  font-family: monospace;
+}
+
+.hangImg {
+  transform: scaleX(-1);
+  display: block;
+  margin: auto;
+}
+
+.hangFormGroup, .hangBodyText {
+  margin-top: 10px;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+.hangInputBox {
+  max-width: 50%;
+}
+
+.hang-btn {
+  margin-top: 10px;
+}
+
+.hangBodySubText {
+  font-size: 1.25rem;
+  color: grey;
+}
+
+.footText {
+  text-align: center;
+  margin-top: 5px;
+  font-family: "Neucha", cursive;
+}
+
+/*#########Mobile Styles########*/
+
+@media screen and (max-width: 768px) {
+  .hangLogo {
+    
+  }
+  .hangTitle {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .hangSubTitle {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .hangFormGroup, .hangBodyText {
+  text-align: center;
+  }
+
+  .hangInputBox {
+    display: block;
+    margin: auto;
+    max-width: 75%;
+  }
+
+  .hang-btn {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .hangBodySubText {
+    text-align: center;
+  }
+}

@@ -9,9 +9,50 @@
   <link rel="stylesheet" href="hangrysoup.css">
 </head>
 
-<body>
+<body class="hangBody">
+
+  <!-- Header Container -->
+  <div class="container hang-top-container">
+    <div class="row">
+      <div class="col-lg-1 col-md-2">
+        <img src="assets/noose.png" class="img-fluid hangLogo">
+      </div>
+      <div class="col-lg-11 col-md-10">
+        <h1 class="hangTitle">Hangry Soup</h1>
+        <h2 class="hangSubTitle">A soup themed hangman game for crazy people</h2>
+      </div>
+    </div>
+  </div>
   
+  <!-- Body Container -->
+  <div class="container hang-body-container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="assets/Hangman-0.png" class="img-fluid hangImg">
+      </div>
+      <div class="col-md-9">
+        <form class="hangFormGroup" id="hangForm">
+          <div class="form-group">
+            <label for="hangInput">Choose Your Letter:</label>
+            <input type="text" class="form-control hangInputBox" id="hangInput" placeholder="Enter A Letter...">
+            <button type="submit" class="btn hang-btn">Submit</button>
+          </div>
+        </form>
+        <p class="hangBodyText">Prior Choices:</p>
+        <p class="hangBodySubText" id="hangText">None</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Container -->
   
+  <div class="container hang-body-container">
+    <div class="row">
+      <div class="col-12">
+        <h6 class="footText">Copyright &copy; 2018 by Phillip Clapham</h6>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
