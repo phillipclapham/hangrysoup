@@ -39,7 +39,7 @@ html {
 
 .hang-body-container {
   margin-top: 5px;
-  background: rgba(254,254,254,.5);
+  background: rgba(254,254,254,.6);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
   font-family: monospace;
@@ -51,8 +51,22 @@ html {
   margin: auto;
 }
 
-.hangFormGroup, .hangBodyText {
+.answerText {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-family: "Indie Flower", cursive;
+  font-size: 2rem;
+}
+
+.hangFormGroup {
   margin-top: 10px;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+.hangBodyText {
+  margin-top: 20px;
+  margin-bottom: 0px;
   font-family: monospace;
   font-size: 1.5rem;
 }
@@ -63,17 +77,27 @@ html {
 
 .hang-btn {
   margin-top: 10px;
+  color: #fff;
+  background: green;
 }
 
 .hangBodySubText {
   font-size: 1.25rem;
-  color: grey;
+  color: #666;
 }
 
 .footText {
   text-align: center;
   margin-top: 5px;
   font-family: "Neucha", cursive;
+}
+
+.hang-foot-container {
+  margin-top: 5px;
+  background: rgba(254,254,254,.5);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  font-family: monospace;
 }
 
 /*#########Mobile Styles########*/
@@ -88,6 +112,11 @@ html {
   }
   
   .hangSubTitle {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .answerText {
     text-align: center;
     font-size: 1.5rem;
   }
