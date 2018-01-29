@@ -39,7 +39,7 @@ html {
 
 .hang-body-container {
   margin-top: 5px;
-  background: rgba(254,254,254,.7);
+  background: rgba(254,254,254,.6);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
   font-family: monospace;
@@ -84,28 +84,67 @@ html {
 .hangBodySubText {
   font-size: 1.25rem;
   color: #666;
+  margin-bottom: 30px;
 }
 
 .footText {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
   font-family: "Neucha", cursive;
 }
 
 .hang-foot-container {
   margin-top: 5px;
+  margin-bottom: 1%;
   background: rgba(254,254,254,.5);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
   font-family: monospace;
 }
 
+a {
+  color: green;
+}
+
+a:active {
+  color: #fff;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hang-card {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, .1), rgba(254,254,254,.1));
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.hangInfoTitle {
+  font-family: "Neucha", cursive;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 800;
+  color: green;
+}
+
+.hangLinks {
+  list-style: none;
+  line-height: 2;
+}
+
 /*#########Mobile Styles########*/
 
 @media screen and (max-width: 768px) {
-  .hangLogo {
-    
-  }
   .hangTitle {
     text-align: center;
     font-size: 2rem;
