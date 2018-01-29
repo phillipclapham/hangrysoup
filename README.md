@@ -14,6 +14,6 @@ I'm a freelance IT support engineer and web developer.
 I'm currently looking for a great place to work or freelance projects to do! Check out the links on home page or the info below to find out more about me or to send a hello my way.
 
 Email: phillip@claphamtech.com
-[Resume][https://claphamtech.com/phillip]
-[Website][https://claphamtech.com]
-[Live Game][https://claphamtech.com] - Not Yet Live!
+Resume: https://claphamtech.com/phillip
+Website: https://claphamtech.com
+Live Game: https://claphamtech.com - Not Yet Live!
