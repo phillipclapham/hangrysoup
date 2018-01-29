@@ -179,4 +179,8 @@ a:hover {
   .hangBodySubText {
     text-align: center;
   }
+  
+  .mobileCard {
+    margin-top: -10px;
+  }
 }
