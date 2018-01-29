@@ -1,3 +1,6 @@
+<!-- Hangry Soup
+by Phillip Clapham -->
+
 <!DOCTYPE html>
 <html lang="">
 
@@ -27,12 +30,18 @@
   <!-- Body Container -->
   <div class="container hang-body-container">
     <div class="row">
-      <div class="col-12 difTop">
+      <div class="col-12">
         <p class="hangDifText">Choose Your Difficulty:</p>
-        <button class="btn btn-lg hang-dif-btn easy">Easy</button>
-        <button class="btn btn-lg hang-dif-btn medium">Medium</button>
-        <button class="btn btn-lg hang-dif-btn hard">Hard</button>
       </div>
+    </div>
+    <div class="row difTop">
+      <div class="col"></div>
+      <div class="col-auto">
+        <input type="button" value="Easy" class="btn hang-dif-btn easy" id="easyBtn">
+        <input type="button" value="Medium" class="btn hang-dif-btn medium" id="medBtn">
+        <input type="button" value="Hard" class="btn hang-dif-btn hard" id="hardBtn">
+      </div>
+      <div class="col"></div>
     </div>
     <div class="row">
       <div class="col"></div>
@@ -45,7 +54,7 @@
           <div class="form-group">
             <label for="hangInput">Choose Your Letter:</label>
             <input type="text" class="form-control hangInputBox" id="hangInput" placeholder="Enter A Letter...">
-            <button type="submit" class="btn hang-btn" onclick="soupTurn()">Submit</button>
+            <input type="button" value="Submit" class="btn hang-btn" id="soupTurn">
           </div>
         </form>
         <p class="hangBodyText">Prior Choices:</p>

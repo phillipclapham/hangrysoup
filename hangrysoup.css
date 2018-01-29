@@ -50,10 +50,7 @@ html {
 }
 
 .hang-dif-btn {
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  color: white;
+  color: #fff;
 }
 
 .hang-dif-btn.easy {
@@ -115,8 +112,14 @@ html {
   background: green;
 }
 
+.hang-btn:hover {
+  background: #000;
+  cursor: pointer;
+}
+
 .hangBodySubText {
-  font-size: 1.25rem;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
   color: #666;
   margin-bottom: 30px;
 }
@@ -180,7 +183,7 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .hangDifText {
-    font-size: 1rem;  
+    font-size: 1.25rem;  
   }
   
   .hangTitle {
