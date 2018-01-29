@@ -5,5 +5,9 @@ function soupTurn() {
   alert(hangInput.value);
 }
 
-let answerText = document.getElementById("answerTextId");
-answerText.innerText = "_ _ _ _ _ _";
+function firstRun() {
+  let answerText = document.getElementById("answerTextId");
+  answerText.innerText = "_ _ _ _ _ _";
+}
+
+firstRun();

@@ -45,6 +45,40 @@ html {
   font-family: monospace;
 }
 
+.difTop {
+  margin-bottom: 20px;
+}
+
+.hang-dif-btn {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  color: white;
+}
+
+.hang-dif-btn.easy {
+  background: green;
+}
+
+.hang-dif-btn.medium {
+  background: orange;
+}
+
+.hang-dif-btn.hard {
+  background: red;
+}
+
+.hang-dif-btn:hover {
+  background: black;
+  cursor: pointer;
+}
+
+.hangDifText {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
 .hangImg {
   transform: scaleX(-1);
   display: block;
@@ -145,6 +179,10 @@ a:hover {
 /*#########Mobile Styles########*/
 
 @media screen and (max-width: 768px) {
+  .hangDifText {
+    font-size: 1rem;  
+  }
+  
   .hangTitle {
     text-align: center;
     font-size: 2rem;

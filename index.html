@@ -27,10 +27,19 @@
   <!-- Body Container -->
   <div class="container hang-body-container">
     <div class="row">
+      <div class="col-12 difTop">
+        <p class="hangDifText">Choose Your Difficulty:</p>
+        <button class="btn btn-lg hang-dif-btn easy">Easy</button>
+        <button class="btn btn-lg hang-dif-btn medium">Medium</button>
+        <button class="btn btn-lg hang-dif-btn hard">Hard</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
       <div class="col-md-3">
         <img src="assets/Hangman-0.png" class="img-fluid hangImg">
       </div>
-      <div class="col-md-9">
+      <div class="col-md-5">
         <p class="answerText" id="answerTextId"></p>
         <form class="hangFormGroup" id="hangForm">
           <div class="form-group">
@@ -42,6 +51,7 @@
         <p class="hangBodyText">Prior Choices:</p>
         <p class="hangBodySubText" id="hangText">None</p>
       </div>
+      <div class="col"></div>
     </div>
   </div>
 
