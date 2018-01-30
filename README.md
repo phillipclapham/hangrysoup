@@ -5,15 +5,15 @@
 Bootstrap 4.0 and dependencies - HTML code uses CDN for Bootstrap CSS and JS, JQuery, and Popper.js
 
 ##### About:
-Hangry Soup is a project by Phillip A. Clapham.
+Hangry Soup is a project by Phillip and Sommer Clapham.
 
-I'm a freelance IT support engineer and web developer.
+Phill is a freelance IT support engineer and web developer and Sommer is digital artist and designer.
 
-I'm currently looking for a great place to work or freelance projects to do! Check out the links on the home page or the info below to find out more about me or to send a hello my way.
+We're currently looking for a great place to work or freelance projects to do! Check out the links on the home page or the info below to find out more about us or to send a hello our way.
 
-Email: phillip@claphamtech.com
+Emails: phillip@claphamtech.com, sommer@claphamtech.com
 
-Resume: https://claphamtech.com/phillip
+Phill's Resume: https://claphamtech.com/phillip
 
 Website: https://claphamtech.com
 
