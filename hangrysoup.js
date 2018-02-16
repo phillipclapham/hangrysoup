@@ -1,11 +1,14 @@
 /* HangrySoup.JS */
 
-function firstRun() {
+function mainRun() {
   "use strict";
   
-  /* Initialize Page */
+  /* Initialize Page and Inital Game Variables*/
   let answerText = document.getElementById("answerTextId");
   answerText.innerText = "_ _ _ _ _ _ _ _";
+
+  let gameOn = false;
+  let gameDifficulty;
   
   /* Initialize event listeners */
   let eListen = document.getElementById("easyBtn");
@@ -14,7 +17,12 @@ function firstRun() {
   let sTurn = document.getElementById("soupTurn");
   
   eListen.addEventListener("click", function() {
-    alert("Easy");
+    if (gameOn) {
+      alert("Game already in progress.");
+    } else {
+      gameDifficulty = "easy";
+      alert(gameDifficulty);
+    }
   });
   mListen.addEventListener("click", function() {
     alert("Medium");
@@ -28,4 +36,4 @@ function firstRun() {
   
 }
 
-firstRun();
+mainRun();
