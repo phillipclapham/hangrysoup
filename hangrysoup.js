@@ -33,11 +33,11 @@ function mainRun() {
 
   let gameOn = false;
   let gameDifficulty, gameWord;
-
   let resetModal = document.getElementById("resetModal");
   let resetModalClose = document.getElementById("resetModalClose");
   let resetModalCloseBtn = document.getElementById("closeBtn");
-  let resetBtn = document.getElementById("resetBtn")
+  let resetBtn = document.getElementById("resetBtn");
+
 
   // Initialize event listeners
   // When the user clicks on <span> (x), close the modal
@@ -62,7 +62,7 @@ function mainRun() {
     resetModal.style.display = "none";
     gameOn = false;
     answerText.innerText = "________";
-  }
+  };
   
   // Grab Buttons 
   let eListen = document.getElementById("easyBtn");
@@ -114,7 +114,11 @@ function mainRun() {
 
   // Submit Button
   sTurn.addEventListener("click", function() {
-    alert("Submit");
+    if (gameOn) {
+      alert("Submit");
+    } else {
+      alert("No Game.");
+    }
   });
   
 }
