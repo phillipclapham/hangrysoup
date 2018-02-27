@@ -1,6 +1,0 @@
-{
-  "easy": ["broth", "stew", "dish", "egg drop", "food", "meat", "cream", "noodles", "pesto", "cheese", "tofu", "butter", "bread", "meal", "chili", "rice", "water", "flour", "liquid", "bowl", "fried", "gumbo", "wonton", "lentil", "tomato", "leek"],
-  "medium": ["vegetable", "bouillon", "bisque", "gazpacho", "minestrone", "consomme", "salisbury", "composition", "julienne", "eggplant", "chowder", "borscht", "cucumber", "breadsticks", "goulash"],
-  "hard": ["ratatouille", "provender", "zucchini", "commissariat", "salmagundi", "nourishment",
-    "bolognese", "worcestershire", "hollandaise", "mulligatawny", "vichyssoise", "corn chowder"]
-}
