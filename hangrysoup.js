@@ -32,11 +32,13 @@ function mainRun() {
   answerText.innerText = "________";
 
   let gameOn = false;
-  let gameDifficulty, gameWord;
+  let gameDifficulty, gameWord, guess;
   let resetModal = document.getElementById("resetModal");
   let resetModalClose = document.getElementById("resetModalClose");
   let resetModalCloseBtn = document.getElementById("closeBtn");
   let resetBtn = document.getElementById("resetBtn");
+  let modalTextBox = document.getElementById("modalTextBox");
+  let hangInput = document.getElementById("hangInput");
 
 
   // Initialize event listeners
@@ -74,6 +76,7 @@ function mainRun() {
   eListen.addEventListener("click", function() {
     if (gameOn) {
       resetModal.style.display = "block";
+      modalTextBox.innerHTML = "<p class=\"modalText\">You already have a game in progress.<br>If you wish to reset your game, click Reset below, otherwise you may close this window.</p>";
     } else {
       gameDifficulty = "easy";
       gameWord = chooseWord(gameDifficulty);
@@ -88,6 +91,7 @@ function mainRun() {
   mListen.addEventListener("click", function() {
     if (gameOn) {
       resetModal.style.display = "block";
+      modalTextBox.innerHTML = "<p class=\"modalText\">You already have a game in progress.<br>If you wish to reset your game, click Reset below, otherwise you may close this window.</p>";
     } else {
       gameDifficulty = "medium";
       gameWord = chooseWord(gameDifficulty);
@@ -102,6 +106,7 @@ function mainRun() {
   hListen.addEventListener("click", function() {
     if (gameOn) {
       resetModal.style.display = "block";
+      modalTextBox.innerHTML = "<p class=\"modalText\">You already have a game in progress.<br>If you wish to reset your game, click Reset below, otherwise you may close this window.</p>";
     } else {
       gameDifficulty = "hard";
       gameWord = chooseWord(gameDifficulty);
@@ -115,9 +120,13 @@ function mainRun() {
   // Submit Button
   sTurn.addEventListener("click", function() {
     if (gameOn) {
-      alert("Submit");
+      guess = hangInput.value;
+      hangInput.value = "";
+      alert(guess);
     } else {
-      alert("No Game.");
+      resetModal.style.display = "block";
+      modalTextBox.innerHTML = '<p class="modalText">You do not have a game in progress or your input is bad.<br>Please try again.</p>';
+      resetBtn.style.display = "none";
     }
   });
   
