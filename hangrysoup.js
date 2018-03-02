@@ -1,5 +1,27 @@
 /* HangrySoup.JS */
 
+//  Disable Enter Key
+window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+
+// Initialize Page and Inital Game Variables
+let answerText = document.getElementById("answerTextId");
+answerText.innerText = "________";
+
+let gameOn = false;
+let gameDifficulty, gameWord, guess;
+let resetModal = document.getElementById("resetModal");
+let resetModalClose = document.getElementById("resetModalClose");
+let resetModalCloseBtn = document.getElementById("closeBtn");
+let resetBtn = document.getElementById("resetBtn");
+let modalTextBox = document.getElementById("modalTextBox");
+let hangInput = document.getElementById("hangInput");
+
+// Grab Buttons 
+let eListen = document.getElementById("easyBtn");
+let mListen = document.getElementById("medBtn");
+let hListen = document.getElementById("hardBtn");
+let sTurn = document.getElementById("soupTurn"); 
+
 // Return random word by chosen difficulty
 function chooseWord(gameDifficulty) {
   
@@ -26,20 +48,6 @@ function letterSpaceReset(word) {
 // Main game loop
 function mainRun() {
   "use strict";
-  
-  // Initialize Page and Inital Game Variables
-  let answerText = document.getElementById("answerTextId");
-  answerText.innerText = "________";
-
-  let gameOn = false;
-  let gameDifficulty, gameWord, guess;
-  let resetModal = document.getElementById("resetModal");
-  let resetModalClose = document.getElementById("resetModalClose");
-  let resetModalCloseBtn = document.getElementById("closeBtn");
-  let resetBtn = document.getElementById("resetBtn");
-  let modalTextBox = document.getElementById("modalTextBox");
-  let hangInput = document.getElementById("hangInput");
-
 
   // Initialize event listeners
   // When the user clicks on <span> (x), close the modal
@@ -66,11 +74,6 @@ function mainRun() {
     answerText.innerText = "________";
   };
   
-  // Grab Buttons 
-  let eListen = document.getElementById("easyBtn");
-  let mListen = document.getElementById("medBtn");
-  let hListen = document.getElementById("hardBtn");
-  let sTurn = document.getElementById("soupTurn");
   
   // Easy Button
   eListen.addEventListener("click", function() {
