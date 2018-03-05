@@ -8,7 +8,8 @@ by Phillip and Sommer Clapham -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title></title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="hangrysoup.css">
 </head>
 
@@ -46,22 +47,112 @@ by Phillip and Sommer Clapham -->
     <div class="row">
       <div class="col"></div>
       <div class="col-md-3">
-        <img src="assets/img/Hangman-0.png" class="img-fluid hangImg">
+        <img src="assets/img/Hangman-0.png" class="img-fluid hangImg" id="hangImgID">
       </div>
       <div class="col-md-5">
         <p class="answerText" id="answerTextId"></p>
-        <form class="hangFormGroup" id="hangForm">
-          <div class="form-group">
-            <label for="hangInput">Choose Your Letter:</label>
-            <input type="text" class="form-control hangInputBox" id="hangInput" placeholder="Enter A Letter...">
-            <input type="button" value="Submit" class="btn hang-btn" id="soupTurn">
+        <p class="hangBodyText">Choose Your Letter:</p>
+        <div class="answerBox">
+          <div class="row text-center">
+            <div class="col"></div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerA">A</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerB">B</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerC">C</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerD">D</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerE">E</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerF">F</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerG">G</p>
+            </div>
+            <div class="col"></div>
           </div>
-        </form>
-        <p class="hangBodyText">Prior Choices:</p>
+          <div class="row text-center">
+            <div class="col"></div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerH">H</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerI">I</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerJ">J</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerK">K</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerL">L</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerM">M</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerN">N</p>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row text-center">
+            <div class="col"></div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerO">O</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerP">P</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerQ">Q</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerR">R</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerS">S</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerT">T</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerU">U</p>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row text-center">
+            <div class="col"></div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerV">V</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerW">W</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerX">X</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerY">Y</p>
+            </div>
+            <div class="col-1">
+              <p class="hangBodyClickText" id="answerZ">Z</p>
+            </div>
+            <div class="col"></div>
+          </div>
+        </div>
+        <p class="hangBodyText">Wrong Letters:</p>
         <p class="hangBodySubText" id="hangText">None</p>
       </div>
       <div class="col-md-2">
-        <img src="assets/img/soup.png" class="img-fluid hangImg">
+        <img src="assets/img/soup.png" class="img-fluid hangImg" id="soupImg">
       </div>
       <div class="col"></div>
     </div>
@@ -74,7 +165,12 @@ by Phillip and Sommer Clapham -->
         <div class="card hang-card">
           <div class="card-body">
             <p class="hangInfoTitle">About</p>
-            <p class="hangInfoText">Hangry Soup is a project by Phillip and Sommer Clapham.<br><br>Phill is a freelance IT support engineer and web developer and Sommer is a digital artist and designer.<br><br>We're currently looking for a great place to work or freelance projects to do! Check out the links to find out more about us or to send a hello our way.</p>
+            <p class="hangInfoText">Hangry Soup is a project by Phillip and Sommer Clapham.
+              <br>
+              <br>Phill is a freelance software engineer and web developer and Sommer is a freelance digital artist and designer.
+              <br>
+              <br>We're currently looking for a great freelance projects to do! Check out the links to find
+              out more about us or to send a hello our way.</p>
           </div>
         </div>
       </div>
@@ -83,11 +179,21 @@ by Phillip and Sommer Clapham -->
           <div class="card-body">
             <p class="hangInfoTitle">Links</p>
             <ul class="hangLinks">
-              <li><a href="https://claphamtech.com/phillip" target="_blank">Phill's Resume</a></li>
-              <li><a href="https://www.linkedin.com/in/phillipclapham" target="_blank">Phill's LinkedIn</a></li>
-              <li><a href="https://github.com/phillipclapham" target="_blank">Phill's GitHub</a></li>
-              <li><a href="https://claphamtech.com/blog.html" target="_blank">Our Blog</a></li>
-              <li><a href="https://claphamtech.com" target="_blank">Clapham Technology Studio</a></li>
+              <li>
+                <a href="https://claphamtech.com/phillip" target="_blank">Phill's Resume</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/phillipclapham" target="_blank">Phill's LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://github.com/phillipclapham" target="_blank">Phill's Bitbucket</a>
+              </li>
+              <li>
+                <a href="https://claphamtech.com/blog.html" target="_blank">Our Blog</a>
+              </li>
+              <li>
+                <a href="https://claphamtech.com" target="_blank">Clapham Technology Studio</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -99,7 +205,10 @@ by Phillip and Sommer Clapham -->
   <div class="container hang-foot-container">
     <div class="row">
       <div class="col-12">
-        <h6 class="footText">Copyright &copy; 2018 by <a href="https://claphamtech.com/phillip" target="_blank">Phillip A. Clapham</a> and <a href="https://claphamtech.com" target="_blank">Clapham Technology Studio</a></h6>
+        <h6 class="footText">Copyright &copy; 2018 by
+          <a href="https://claphamtech.com/phillip" target="_blank">Phillip A. Clapham</a> and
+          <a href="https://claphamtech.com" target="_blank">Clapham Technology Studio</a>
+        </h6>
       </div>
     </div>
   </div>
@@ -117,9 +226,12 @@ by Phillip and Sommer Clapham -->
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="hangrysoup.js"></script>
 </body>
 

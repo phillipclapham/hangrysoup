@@ -8,19 +8,21 @@ let answerText = document.getElementById("answerTextId");
 answerText.innerText = "________";
 
 let gameOn = false;
-let gameDifficulty, gameWord, guess;
+let gameDifficulty, gameWord, targetID, imgURL, win;
 let resetModal = document.getElementById("resetModal");
 let resetModalClose = document.getElementById("resetModalClose");
 let resetModalCloseBtn = document.getElementById("closeBtn");
 let resetBtn = document.getElementById("resetBtn");
 let modalTextBox = document.getElementById("modalTextBox");
-let hangInput = document.getElementById("hangInput");
+let hangImgID = document.getElementById("hangImgID");
+let wrongGuesses = 0;
+let clicked = [];
 
-// Grab Buttons 
+// Grab Buttons and Other Event Elements
 let eListen = document.getElementById("easyBtn");
 let mListen = document.getElementById("medBtn");
 let hListen = document.getElementById("hardBtn");
-let sTurn = document.getElementById("soupTurn"); 
+let answerBox = document.querySelector(".answerBox");
 
 // Return random word by chosen difficulty
 function chooseWord(gameDifficulty) {
@@ -41,8 +43,16 @@ function letterSpaceReset(word) {
   for (i = 0; i < word.length; i++) {
     builtSpaces += "_";
   }
-  let answerText = document.getElementById("answerTextId");
+
   answerText.innerText = builtSpaces;
+}
+
+// Test if letter is already clicked
+function alreadyClicked(clickTarget) {
+  for (let i of clicked) {
+    if (i === clickTarget) return true;
+  }
+  return false;
 }
 
 // Main game loop
@@ -69,9 +79,11 @@ function mainRun() {
 
   // When the user clicks on reset button reset game
   resetBtn.onclick = function() {
-    resetModal.style.display = "none";
-    gameOn = false;
-    answerText.innerText = "________";
+    // Resets visuals, for now keep as just reloading whole page, modify later...
+    // resetModal.style.display = "none";
+    // gameOn = false;
+    // answerText.innerText = "________";
+    location.reload();
   };
   
   
@@ -79,6 +91,7 @@ function mainRun() {
   eListen.addEventListener("click", function() {
     if (gameOn) {
       resetModal.style.display = "block";
+      resetBtn.style.display = "block";
       modalTextBox.innerHTML = "<p class=\"modalText\">You already have a game in progress.<br>If you wish to reset your game, click Reset below, otherwise you may close this window.</p>";
     } else {
       gameDifficulty = "easy";
@@ -94,6 +107,7 @@ function mainRun() {
   mListen.addEventListener("click", function() {
     if (gameOn) {
       resetModal.style.display = "block";
+      resetBtn.style.display = "block";
       modalTextBox.innerHTML = "<p class=\"modalText\">You already have a game in progress.<br>If you wish to reset your game, click Reset below, otherwise you may close this window.</p>";
     } else {
       gameDifficulty = "medium";
@@ -109,6 +123,7 @@ function mainRun() {
   hListen.addEventListener("click", function() {
     if (gameOn) {
       resetModal.style.display = "block";
+      resetBtn.style.display = "block";
       modalTextBox.innerHTML = "<p class=\"modalText\">You already have a game in progress.<br>If you wish to reset your game, click Reset below, otherwise you may close this window.</p>";
     } else {
       gameDifficulty = "hard";
@@ -119,18 +134,67 @@ function mainRun() {
       letterSpaceReset(gameWord);
     }
   });
+  
+  // Letter Clicks - Needs to prevent already clicked letters from working
+  answerBox.addEventListener("click", function(e) {
+    if (e.target !== e.currentTarget) {
+      if (gameOn) {
+        if (!alreadyClicked(e.target.id)) {
+          // Set Letter on Screen to Checkmark
+          targetID = e.target.id;
+          let guess = targetID.split("")[targetID.length - 1].toLowerCase();
+          let targetIDSel= document.querySelector("#" + targetID);
+          targetIDSel.innerHTML = "&#10003;";
+          clicked.push(targetID);
 
-  // Submit Button
-  sTurn.addEventListener("click", function() {
-    if (gameOn) {
-      guess = hangInput.value;
-      hangInput.value = "";
-      alert(guess);
-    } else {
-      resetModal.style.display = "block";
-      modalTextBox.innerHTML = '<p class="modalText">You do not have a game in progress or your input is bad.<br>Please try again.</p>';
-      resetBtn.style.display = "none";
+          // Check against gameWord
+          let gameWordArray = gameWord.split("");
+          // If found...
+          if (gameWordArray.indexOf(guess) !== -1) {
+            let foundIndexes = [];
+            for (let i in gameWordArray) {
+              if (gameWordArray[i] === guess) foundIndexes.push(i);
+            }
+
+            let replaceAnswerText = answerText.innerText.split("");
+            for (let i of foundIndexes) {
+              replaceAnswerText.splice(i, 1, guess.toUpperCase());
+            }
+            answerText.innerText = replaceAnswerText.join("");
+            // Test for Win
+            win = true;
+            for (let i of replaceAnswerText) {
+              if (i === "_") win = false;
+            }
+            if (win) {
+              resetModal.style.display = "block";
+              resetBtn.style.display = "block";
+              modalTextBox.innerHTML = "<p class=\"modalText\">You Win!<br>To play again, choose Reset below.</p>";
+            }
+          } else {
+            // Else output to wrong choices
+            wrongGuesses++;
+            imgURL = "assets/img/Hangman-" + wrongGuesses + ".png";
+            hangImgID.src = imgURL;
+            if (wrongGuesses === 6) {
+              resetModal.style.display = "block";
+              resetBtn.style.display = "block";
+              modalTextBox.innerHTML = "<p class=\"modalText\">You Lose!<br>To play again, choose Reset below.</p>";
+            }
+            let wrongLetterText = document.getElementById("hangText");
+            if (wrongLetterText.innerText === "None") {
+              wrongLetterText.innerText = "";
+            }
+            wrongLetterText.innerText += " " + guess.toUpperCase();
+          }
+        }
+      } else {
+        resetModal.style.display = "block";
+        resetBtn.style.display = "none";
+        modalTextBox.innerHTML = "<p class=\"modalText\">You do not have a game in progress.<br>To start a game close this popup and select your game difficulty.</p>";
+      }
     }
+    e.stopPropagation();
   });
   
 }
