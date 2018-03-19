@@ -12,3 +12,5 @@ Phill is a freelance web developer and Sommer is a freelance digital artist and 
 We're currently looking for great freelance projects to do! Check out the links on the home page or the info below to find out more about us or to send a hello our way.
 
 Emails: pclapham42@gmail.com, som@thatssomart.com
+
+To Play: https://phillipclapham.github.io/hangrysoup
