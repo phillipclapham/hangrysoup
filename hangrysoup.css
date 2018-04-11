@@ -189,7 +189,7 @@ a:hover {
   text-align: center;
   text-decoration: underline;
   font-weight: 800;
-  color: green;
+  color: #000;
 }
 
 .hangLinks {
@@ -261,23 +261,41 @@ a:hover {
 /*#########Mobile Styles########*/
 
 @media screen and (max-width: 768px) {
+  .hangLogo {
+    display: none;
+  }
+
   .hangDifText {
-    font-size: 1.25rem;  
+    font-size: 1rem;  
+  }
+
+  .hang-dif-btn {
+    font-size: .9rem;
   }
   
   .hangTitle {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   
   .hangSubTitle {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .hangImg {
     left: 50%;
     transform: translateX(-50%) translateY(-60%) scaleX(-1);
+    max-height: 150px;
+  }
+
+  .answerBox {
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  .hangBodyClickText {
+    margin-bottom: 5px;
   }
   
   .answerText {
@@ -286,7 +304,12 @@ a:hover {
   }
   
   .hangFormGroup, .hangBodyText {
-  text-align: center;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hangBodyText {
+    margin-top: 5px;
   }
 
   .hangInputBox {
@@ -303,16 +326,15 @@ a:hover {
 
   .hangBodySubText {
     text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .hangInfoText {
+    text-align: center;
   }
   
   .mobileCard {
     margin-top: -10px;
-  }
-
-  #soupImg {
-    
-    margin-bottom: 20px;
-    max-width: 50%;
   }
 
   .modal-content {
