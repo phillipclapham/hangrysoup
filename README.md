@@ -13,4 +13,4 @@ I'm currently looking for great freelance projects to do! Check out the links on
 
 Emails: pclapham42@gmail.com
 
-To Play: https://phillipclapham.github.io/hangrysoup
+To Play: https://hangrysoup.soupcansam.com
