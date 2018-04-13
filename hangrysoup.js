@@ -149,6 +149,7 @@ function mainRun() {
 
           // Check against gameWord
           let gameWordArray = gameWord.split("");
+          let gameWordText = gameWord[0].toUpperCase() + gameWord.substring(1,gameWord.length);
           // If found...
           if (gameWordArray.indexOf(guess) !== -1) {
             let foundIndexes = [];
@@ -169,7 +170,9 @@ function mainRun() {
             if (win) {
               resetModal.style.display = "block";
               resetBtn.style.display = "block";
-              modalTextBox.innerHTML = "<p class=\"modalText\">You Win!<br>To play again, choose Reset below.</p>";
+              let mtbWinText = "<p class=\"modalText\">You Win!<br>To play again, choose Reset below.</p>";
+              mtbWinText += `<p class="modalText">Your Word:<br>${gameWordText}</p>`;
+              modalTextBox.innerHTML = mtbWinText;
             }
           } else {
             // Else output to wrong choices
@@ -179,7 +182,9 @@ function mainRun() {
             if (wrongGuesses === 6) {
               resetModal.style.display = "block";
               resetBtn.style.display = "block";
-              modalTextBox.innerHTML = "<p class=\"modalText\">You Lose!<br>To play again, choose Reset below.</p>";
+              let mtbLoseText = "<p class=\"modalText\">You Lose!<br>To play again, choose Reset below.</p>";
+              mtbLoseText += `<p class="modalText">Your Word:<br>${gameWordText}</p>`;
+              modalTextBox.innerHTML = mtbLoseText;
             }
             let wrongLetterText = document.getElementById("hangText");
             if (wrongLetterText.innerText === "None") {
