@@ -171,8 +171,11 @@ function mainRun() {
               resetModal.style.display = "block";
               resetBtn.style.display = "block";
               let mtbWinText = "<p class=\"modalText\">You Win!<br>To play again, choose Reset below.</p>";
+              let gameScoreText = String(6 - wrongGuesses) + " / 6";
               mtbWinText += `<p class="modalText">Your Word:<br>${gameWordText}</p>`;
+              mtbWinText += `<p class="modalText">Your Score:<br>${gameScoreText}</p>`;
               modalTextBox.innerHTML = mtbWinText;
+              resetModalCloseBtn.style.display = "none";
             }
           } else {
             // Else output to wrong choices
@@ -185,6 +188,7 @@ function mainRun() {
               let mtbLoseText = "<p class=\"modalText\">You Lose!<br>To play again, choose Reset below.</p>";
               mtbLoseText += `<p class="modalText">Your Word:<br>${gameWordText}</p>`;
               modalTextBox.innerHTML = mtbLoseText;
+              resetModalCloseBtn.style.display = "none";
             }
             let wrongLetterText = document.getElementById("hangText");
             if (wrongLetterText.innerText === "None") {
