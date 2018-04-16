@@ -14,4 +14,4 @@ We're currently looking for great freelance projects to do! Check out the links 
 
 Emails: pclapham42@gmail.com, som@thatssomart.com
 
-To Play: https://hangrysoup.soupcansam.com
+To Play: https://phillipclapham.github.io/hangrysoup
