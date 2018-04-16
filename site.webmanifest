@@ -1,8 +1,8 @@
 {
     "name": "Hangry Soup",
     "short_name": "Hangry Soup",
-    "start_url": "/hangrysoup/index.html",
-    "scope" : "./hangrysoup/",
+    "start_url": "hangrysoup/index.html",
+    "scope" : "./hangrysoup",
     "icons": [
         {
             "src": "./android-chrome-192x192.png",
